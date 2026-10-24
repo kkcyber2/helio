@@ -58,4 +58,4 @@ tests/             pytest
 
 ## Licence
 
-MIT © KK (Conan Sultan Khan)
+MIT © Konain Sultan Khan (KK)

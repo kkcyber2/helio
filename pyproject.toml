@@ -9,7 +9,7 @@ description = '3D product configurator with a real server-side cart, pricing rul
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
-authors = [{name = "KK (Conan Sultan Khan)", email = "kkdev9715@gmail.com"}]
+authors = [{name = "Konain Sultan Khan (KK)", email = "kkdev9715@gmail.com"}]
 keywords = ["helio"]
 
 [project.urls]
