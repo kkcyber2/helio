@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helio — Configure your watch</title>
+<meta name="description" content="Configure a Helio watch in real time: shell, dial, strap and case size, priced as you build it.">
+<meta property="og:title" content="Helio — Configure your watch">
+<meta property="og:description" content="A watch configurator that renders real geometry and prices every choice as you make it.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="mark" href="/">HELIO<span>·</span>WATCHES</a>
+  <p class="bar-note">Assembled to order in the Jura · 4–6 weeks</p>
+</header>
+
+<main>
+  <section class="stage-wrap">
+    <canvas id="stage" aria-label="Live 3D preview of your configured watch" role="img"></canvas>
+    <div class="stage-ui">
+      <div class="readout">
+        <p class="readout-ref" id="ref">HEL-38-ALU-PAR-LEA</p>
+        <p class="readout-price" id="price">£576.00</p>
+        <p class="readout-note" id="price-note">incl. VAT</p>
+      </div>
+      <button id="spin" class="ghost" type="button" aria-pressed="false">Spin</button>
+    </div>
+    <p class="stage-hint">Drag to rotate · scroll to zoom</p>
+  </section>
+
+  <section class="panel" aria-label="Configuration">
+    <form id="config" novalidate>
+      <div id="groups"></div>
+
+      <fieldset class="group">
+        <legend>Caseback engraving <span class="opt">optional</span></legend>
+        <label class="field">
+          <span class="sr">Engraving text</span>
+          <input id="engraving" type="text" maxlength="40" placeholder="Up to 40 characters"
+                 autocomplete="off" aria-describedby="eng-hint">
+        </label>
+        <p class="hint" id="eng-hint"><span id="eng-count">0</span>/40 · £35.00 · added when text is entered</p>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="add" class="solid">Add to bag</button>
+        <p class="cart-line" id="cart-note" role="status" aria-live="polite">Your bag is empty.</p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Helio Watches · Yverdon-les-Bains, Switzerland</p>
+  <p>Prices include 20% VAT. Engraving is final once the order is placed.</p>
+</footer>
+
+<script src="/three.min.js"></script>
+<script src="/render.js"></script>
+<script src="/scene.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
